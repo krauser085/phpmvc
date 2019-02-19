@@ -18,7 +18,7 @@ class Router {
    */
   public function match($url) {
     foreach($this->routes as $route => $params) {
-      if($url == $route) {
+      if(strtolower($url) == $route) {
         $this->params = $params;
         return true;
       }
